@@ -1,0 +1,142 @@
+nav,
+.menu,
+.menu ul {
+  display: flex;
+  // justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  justify-content: space-between;
+  .logo {
+    // margin-right: 1rem;
+    width: 100px;
+  }
+
+  .hamburger {
+    width: 20px;
+    cursor: pointer;
+    filter: invert(0.5);
+    display: none;
+  }
+
+  .menu {
+    width: 80%;
+    justify-content: space-between;
+
+    ul {
+      width: 60%;
+      // justify-content: space-around;
+    }
+  }
+
+  .menu li {
+    padding-left: 1rem;
+  }
+
+  .menu a {
+    color: $grayishViolet;
+    &:hover,
+    &:active {
+      color: $veryDarkBlue;
+    }
+  }
+
+  button {
+    font-size: 0.8rem;
+    font-weight: 700;
+    &:first-child {
+      background: transparent;
+      color: $grayishViolet;
+    }
+    &:last-child {
+      margin-left: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    .hamburger {
+      display: block;
+    }
+
+    .active {
+      display: block !important;
+    }
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: $veryDarkBlue;
+    position: absolute;
+    top: 90px;
+    right: 10%;
+    border-radius: 10px;
+    width: 40% !important;
+    padding: 2rem 1rem;
+    z-index: 3;
+
+    ul a,
+    button {
+      color: white !important;
+    }
+
+    ul,
+    .login-signup {
+      display: flex;
+      flex-direction: column;
+    }
+
+    ul {
+      width: 100% !important;
+      height: 8rem;
+      border-bottom: 1px solid grey;
+      justify-content: space-between;
+      padding-bottom: 1.5rem;
+      // padding: 1.5rem 0;
+
+      li {
+        padding: 0;
+      }
+
+      li a {
+        // margin: 1rem 0;
+        font-size: 0.9rem;
+        &:hover {
+          color: $cyan !important;
+        }
+      }
+    }
+
+    .login-signup {
+      width: 100%;
+
+      button {
+        margin: 0.8rem 0 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav {
+    width: 90%;
+  }
+  .menu {
+    width: 90% !important;
+    right: 0;
+    left: 0;
+    margin: auto;
+    // display: none;
+
+    ul {
+      height: 10rem;
+    }
+  }
+}

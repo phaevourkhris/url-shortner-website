@@ -1,0 +1,69 @@
+$cyan: hsl(180, 66%, 49%);
+$darkViolet: hsl(257, 27%, 26%);
+$red: hsl(0, 87%, 67%);
+$gray: hsl(0, 0%, 75%);
+$grayishViolet: hsl(257, 7%, 63%);
+$veryDarkBlue: hsl(255, 11%, 22%);
+$veryDarkViolet: hsl(260, 8%, 14%);
+$bgcolor1: #f0f1f6;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  // width: 80%;
+  margin: 0 auto;
+  max-width: 1440px;
+  // min-width: 320px;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  // min-width: 320px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: $cyan;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  font-weight: 700;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+h1,
+h3,
+h4 {
+  color: $veryDarkViolet;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: $grayishViolet;
+}
+
+@import "./nav";
+@import "./hero";
+@import "./shortener";
+@import "./services";
+@import "./boostLinks";
+@import "./footer";

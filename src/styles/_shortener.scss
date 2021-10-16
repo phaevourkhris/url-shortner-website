@@ -1,0 +1,184 @@
+.shortener-section {
+  background: $bgcolor1;
+  border: 1px solid $bgcolor1;
+
+  .shortener-container {
+    width: 80%;
+    margin: 0 auto;
+    transform: translateY(-4.5rem);
+  }
+
+  .shortener-input,
+  input,
+  button,
+  li {
+    border-radius: 6px;
+  }
+
+  .shortener-input {
+    width: 100%;
+    background: $veryDarkBlue url("../images/bg-shorten-desktop.svg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input {
+    width: 81%;
+  }
+
+  input {
+    width: 100%;
+    height: 3rem;
+    border: transparent;
+    padding: 10px;
+    font-size: 0.92rem;
+    font-weight: 700;
+    font-family: "Poppins", sans-serif;
+    color: $grayishViolet;
+    // position: relative;
+
+    &:focus {
+      outline-color: $cyan;
+    }
+  }
+
+  .error {
+    color: $red;
+    font-style: italic;
+    text-align: left;
+    position: relative;
+    padding-top: 4px;
+    font-size: 0.9rem;
+  }
+
+  .input-error {
+    border: 2px solid$red;
+    color: $red;
+
+    &::placeholder {
+      color: rgb(248, 126, 126);
+    }
+  }
+
+  .shorten-btn {
+    height: 3rem;
+    width: 17%;
+    padding: 0;
+  }
+
+  li {
+    width: 100%;
+    background: white;
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    align-items: center;
+
+    .original-link {
+      color: $veryDarkBlue;
+      font-size: 0.92rem;
+      width: 50%;
+      margin-right: 1rem;
+      overflow-wrap: break-word;
+    }
+
+    div {
+      display: flex;
+      justify-content: flex-end;
+      width: 45%;
+      align-items: center;
+
+      .shortened-link {
+        text-align: right;
+        color: $cyan;
+        font-size: 0.92rem;
+        overflow-wrap: break-word;
+      }
+
+      button {
+        width: 20%;
+        margin-left: 1rem;
+        padding: 0.5rem 0;
+        text-align: center;
+
+        &:hover {
+          background: $veryDarkBlue !important;
+          color: white !important;
+        }
+      }
+
+      .active-copy {
+        background: $veryDarkBlue !important;
+        color: white !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .shortener-container {
+    transform: translateY(-5.75rem) !important;
+
+    .shortener-input {
+      flex-direction: column;
+      padding: 2rem;
+      input,
+      .shorten-btn {
+        width: 100%;
+      }
+
+      .input {
+        margin-bottom: 1.5rem;
+        width: 100%;
+      }
+    }
+
+    li {
+      flex-direction: column;
+      padding: 0.8rem 0;
+      font-size: 0.8rem;
+
+      .original-link,
+      div {
+        width: 100%;
+        margin: 0;
+        padding: 0 0.8rem;
+      }
+
+      .original-link {
+        padding: 0 0.8rem 0.8rem;
+        border-bottom: 1px solid $gray;
+        font-size: 0.8rem;
+      }
+
+      div {
+        flex-direction: column;
+        .shortened-link,
+        button {
+          width: 100%;
+          margin: 0;
+          padding: 0.7rem 0;
+        }
+
+        .shortened-link {
+          text-align: left;
+          padding: 0.8rem 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .shortener-container {
+    width: 90% !important;
+  }
+}
