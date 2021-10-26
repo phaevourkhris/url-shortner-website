@@ -70,6 +70,10 @@
     height: 3rem;
     width: 17%;
     padding: 0;
+
+    i {
+      margin-right: 0.3rem;
+    }
   }
 
   li {
@@ -89,10 +93,10 @@
       overflow-wrap: break-word;
     }
 
-    div {
+    .shortLink-div {
       display: flex;
       justify-content: flex-end;
-      width: 45%;
+      width: 60%;
       align-items: center;
 
       .shortened-link {
@@ -102,16 +106,35 @@
         overflow-wrap: break-word;
       }
 
-      button {
-        width: 20%;
-        margin-left: 1rem;
-        padding: 0.5rem 0;
-        text-align: center;
+      .btns {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        align-items: center;
 
-        &:hover {
-          background: $veryDarkBlue !important;
-          color: white !important;
+        button {
+          width: 50%;
+          margin-left: 1rem;
+          padding: 0.7rem 0;
+          text-align: center;
+
+          i {
+            margin-right: 0.5rem;
+          }
+
+          &:hover {
+            background: $veryDarkBlue !important;
+            border: 1px solid $veryDarkBlue;
+            color: white !important;
+          }
         }
+      }
+      // }
+
+      .del-btn {
+        border: 1px solid red;
+        background: transparent;
+        color: $red;
       }
 
       .active-copy {
@@ -146,7 +169,7 @@
       font-size: 0.8rem;
 
       .original-link,
-      div {
+      .shortLink.div {
         width: 100%;
         margin: 0;
         padding: 0 0.8rem;
@@ -158,19 +181,30 @@
         font-size: 0.8rem;
       }
 
-      div {
+      .shortLink-div {
         flex-direction: column;
+        width: 100%;
+        padding: 0 0.8rem;
         .shortened-link,
         button {
-          width: 100%;
-          margin: 0;
+          margin: 0 !important;
           padding: 0.7rem 0;
         }
 
         .shortened-link {
+          width: 100%;
           text-align: left;
           padding: 0.8rem 0;
           font-size: 0.8rem;
+        }
+
+        .btns {
+          width: 100% !important;
+          justify-content: space-between;
+
+          button {
+            width: 48%;
+          }
         }
       }
     }

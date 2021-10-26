@@ -5,24 +5,18 @@ import Services from "./components/Services";
 import BoostLinks from "./components/BoostLinks";
 import Footer from "./components/Footer";
 
-const Home = ({
-  newLongLink,
-  setNewLongLink,
-  textInput,
-  setTextInput,
-  newShortLink,
-  setNewShortLink,
-}) => {
+const Home = () => {
   return (
     <div>
       <Hero />
       <Shortener
-        newLongLink={newLongLink}
-        setNewLongLink={setNewLongLink}
-        newShortLink={newShortLink}
-        setNewShortLink={setNewShortLink}
-        textInput={textInput}
-        setTextInput={setTextInput}
+      // newLongLink={newLongLink}
+      // setNewLongLink={setNewLongLink}
+      // newShortLink={newShortLink}
+      // setNewShortLink={setNewShortLink}
+      // textInput={textInput}
+      // setTextInput={setTextInput}
+      // key={key}
       />
       <Services />
       <BoostLinks />

@@ -12,7 +12,6 @@
     "react-copy-to-clipboard": "^5.0.4",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
-    "use-clippy": "^1.0.8",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

@@ -37,10 +37,8 @@ nav {
 
   .menu li {
     padding-left: 1rem;
-  }
-
-  .menu a {
     color: $grayishViolet;
+    cursor: pointer;
     &:hover,
     &:active {
       color: $veryDarkBlue;
@@ -53,6 +51,11 @@ nav {
     &:first-child {
       background: transparent;
       color: $grayishViolet;
+      border: transparent;
+
+      &:hover {
+        border: 1px solid $cyan;
+      }
     }
     &:last-child {
       margin-left: 0.8rem;

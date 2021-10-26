@@ -18,15 +18,9 @@ const Nav = ({ menuStatus, setMenuStatus }) => {
       />
       <div className={`menu ${menuStatus ? "active" : ""}`}>
         <ul>
-          <li>
-            <a href="#">Features</a>
-          </li>
-          <li>
-            <a href="#">Pricing</a>
-          </li>
-          <li>
-            <a href="#">Resources</a>
-          </li>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Resources</li>
         </ul>
         <div className="login-signup">
           <button>Login</button>

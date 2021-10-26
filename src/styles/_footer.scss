@@ -30,10 +30,9 @@ footer {
 
     li {
       margin: 1rem 0;
-    }
-    a {
       color: $gray;
       font-size: 0.8rem;
+      cursor: pointer;
 
       &:hover {
         color: $cyan;
