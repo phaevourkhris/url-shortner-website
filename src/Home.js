@@ -7,21 +7,23 @@ import Footer from "./components/Footer";
 
 const Home = () => {
   return (
-    <div>
-      <Hero />
-      <Shortener
-      // newLongLink={newLongLink}
-      // setNewLongLink={setNewLongLink}
-      // newShortLink={newShortLink}
-      // setNewShortLink={setNewShortLink}
-      // textInput={textInput}
-      // setTextInput={setTextInput}
-      // key={key}
-      />
-      <Services />
-      <BoostLinks />
+    <>
+      <main>
+        <Hero />
+        <Shortener
+        // newLongLink={newLongLink}
+        // setNewLongLink={setNewLongLink}
+        // newShortLink={newShortLink}
+        // setNewShortLink={setNewShortLink}
+        // textInput={textInput}
+        // setTextInput={setTextInput}
+        // key={key}
+        />
+        <Services />
+        <BoostLinks />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 };
 

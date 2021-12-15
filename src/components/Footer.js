@@ -12,19 +12,19 @@ const Footer = () => {
       <div className="clickables">
         <div className="quicklinks">
           <ul className="features">
-            <p className="title">Features</p>
+            <li className="title">Features</li>
             <li>Link Shortening</li>
             <li>Branded Links</li>
             <li>Analytics</li>
           </ul>
           <ul className="resources">
-            <p className="title">Resources</p>
+            <li className="title">Resources</li>
             <li>Blog</li>
             <li>Developers</li>
             <li>Support</li>
           </ul>
           <ul className="company">
-            <p className="title">Company</p>
+            <li className="title">Company</li>
             <li>About</li>
             <li>Our Team</li>
             <li>Careers</li>

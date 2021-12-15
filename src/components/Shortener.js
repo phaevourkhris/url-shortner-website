@@ -21,24 +21,30 @@ const Shortener = () => {
   const shortenLink = (e) => {
     if (textInput === "") {
       setErrorMessage("Please add a link");
-      console.log("copy");
     } else {
       setIsLoading(!isloading);
-      Axios.get(`${baseURL}?url=${textInput}`).then((response) => {
-        const shortLink = response.data.result.short_link;
-        setNewShortLink([
-          ...newShortLink,
-          { id: Math.random(), value: shortLink },
-        ]);
-        // console.log("shortlink:", newShortLink);
-        setNewLongLink([
-          ...newLongLink,
-          { id: Math.random(), value: textInput },
-        ]);
-        setErrorMessage("");
-        setTextInput("");
-        setIsLoading(false);
-      });
+      Axios.get(`${baseURL}?url=${textInput}`)
+        .then((response) => {
+          const shortLink = response.data.result.short_link;
+          setNewShortLink([
+            ...newShortLink,
+            { id: Math.random(), value: shortLink },
+          ]);
+          // console.log("shortlink:", newShortLink);
+          setNewLongLink([
+            ...newLongLink,
+            { id: Math.random(), value: textInput },
+          ]);
+          setErrorMessage("");
+          setTextInput("");
+          setIsLoading(false);
+        })
+        .catch(function (error) {
+          if (error) {
+            setErrorMessage("Please add a link");
+            setIsLoading(false);
+          }
+        });
     }
   };
 
@@ -65,7 +71,7 @@ const Shortener = () => {
   return (
     <div className="shortener-section">
       <div className="shortener-container">
-        <div className="shortener-input">
+        <form className="shortener-input">
           <div className="input">
             <input
               onChange={userInputHandler}
@@ -77,6 +83,7 @@ const Shortener = () => {
             {errorMessage && <div className="error"> {errorMessage} </div>}
           </div>
           <button
+            type="submit"
             onClick={shortenLink}
             className="shorten-btn"
             disabled={isloading}
@@ -89,7 +96,7 @@ const Shortener = () => {
             )}
             Shorten It!
           </button>
-        </div>
+        </form>
         <ul className="prev-shortened-links">
           {newLongLink.map((obj, index) => (
             <li key={index} id={index} className="link-item">
